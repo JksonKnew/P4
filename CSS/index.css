@@ -1,1 +1,88 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --grey-background: #F6F6F6;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+p {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/**********************  HEADER  ***************************/
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title p {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.location {
+  background-color: var(--grey-background);
+}
+.location p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**********************  INTRO  ***************************/
+.section-intro {
+  background-color: var(--grey-background);
+}
+
+.explore-button {
+  border-radius: 25px;
+  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.explore-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}/*# sourceMappingURL=index.css.map */
