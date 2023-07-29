@@ -3,7 +3,8 @@
 }
 
 :root {
-  --grey-background: #F6F6F6;
+  --grey-background: #f6f6f6;
+  --dark-grey-background: #EAEAEA;
 }
 
 body {
@@ -64,7 +65,7 @@ p {
 }
 
 .location {
-  background-color: var(--grey-background);
+  background-color: var(--dark-grey-background);
 }
 .location p {
   display: flex;
@@ -75,10 +76,22 @@ p {
 /**********************  INTRO  ***************************/
 .section-intro {
   background-color: var(--grey-background);
+  height: 440px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.section-intro h2 {
+  margin: 0px;
 }
 
 .explore-button {
   border-radius: 25px;
+  color: white;
+  border: none;
+  padding: 1em 2em;
   background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
