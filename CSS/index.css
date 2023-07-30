@@ -5,6 +5,8 @@
 :root {
   --grey-background: #f6f6f6;
   --dark-grey-background: #EAEAEA;
+  --button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  --button-gradient-hover: linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
 }
 
 body {
@@ -77,6 +79,7 @@ p {
 /**********************  INTRO  ***************************/
 .section-intro {
   background-color: var(--grey-background);
+  padding: 20px;
   height: 440px;
   align-items: center;
   display: flex;
@@ -93,12 +96,12 @@ p {
   color: white;
   border: none;
   padding: 1em 2em;
-  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  background: var(--button-gradient);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
 }
 .explore-button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  background: var(--button-gradient-hover);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   transition: 0.5s;
 }
@@ -108,12 +111,103 @@ p {
   padding: 20px;
 }
 
+.fonctionnement-article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px;
+}
+
 .fonctionnement-article {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  gap: 3%;
   border-radius: 20px;
   background: var(--grey-background);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement-article--n1::before {
+  content: "1";
+  align-items: center;
+  display: flex;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  right: 10px;
+  justify-content: center;
+  color: white;
+  padding: 0.5em;
+  border-radius: 25px;
+  background-color: blue;
+}
+.fonctionnement-article--n2::before {
+  content: "2";
+  align-items: center;
+  display: flex;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  right: 10px;
+  justify-content: center;
+  color: white;
+  padding: 0.5em;
+  border-radius: 25px;
+  background-color: blue;
+}
+.fonctionnement-article--n3::before {
+  content: "3";
+  align-items: center;
+  display: flex;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  right: 10px;
+  justify-content: center;
+  color: white;
+  padding: 0.5em;
+  border-radius: 25px;
+  background-color: blue;
+}
+
+/**********************  Restaurents  ***************************/
+.section-rest {
+  padding: 15px;
+  background-color: var(--grey-background);
+}
+.section-rest-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.rest-card {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  width: 100%;
+}
+.rest-card img {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rest-card-content {
+  height: 30%;
+  width: 100%;
+}
+.rest-card-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rest-card-content-text h3, .rest-card-content-text p {
+  margin: 0px;
 }/*# sourceMappingURL=index.css.map */
