@@ -72,7 +72,8 @@ p {
 }
 
 .location {
-  background-color: var(---grey-background);
+  background-color: var(--dark-grey-background);
+  box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 .location p {
   display: flex;
@@ -85,9 +86,9 @@ p {
   background-color: var(--grey-background);
   padding: 20px;
   height: 440px;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -97,7 +98,7 @@ p {
 
 .explore-button {
   border-radius: 25px;
-  color: white;
+  color: var(--white-txt);
   border: none;
   padding: 1em 2em;
   background: var(--button-gradient);
@@ -143,7 +144,7 @@ p {
   position: relative;
   right: 13px;
   justify-content: center;
-  color: white;
+  color: var(--white-txt);
   padding: 0.5em;
   border-radius: 25px;
   background-color: var(--primary);
@@ -157,7 +158,7 @@ p {
   position: relative;
   right: 13px;
   justify-content: center;
-  color: white;
+  color: var(--white-txt);
   padding: 0.5em;
   border-radius: 25px;
   background-color: var(--primary);
@@ -171,7 +172,7 @@ p {
   position: relative;
   right: 13px;
   justify-content: center;
-  color: white;
+  color: var(--white-txt);
   padding: 0.5em;
   border-radius: 25px;
   background-color: var(--primary);
@@ -228,7 +229,7 @@ p {
   width: 100%;
   height: 375px;
   display: flex;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
   gap: 18px;
   background-color: var(--footer-bg);
