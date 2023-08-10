@@ -70,6 +70,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    color: $grey-txt;
     p {
         display: flex;
         justify-content: center;
@@ -84,13 +85,17 @@ p {
 .section-intro {
     background-color: $grey-background;
     padding: 20px;
-    height: 440px;
+    height: 380px;
     @include flex-col();
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 20px;
         h2 {
             margin: 0px;
+        }
+        p {
+            margin-top: 0px;
         }
 }
 
@@ -102,6 +107,8 @@ p {
     background: $button-gradient;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
+    font-size: 16px;
+    font-weight: 500px;
     &:hover {
         background: $button-gradient-hover;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
@@ -114,12 +121,15 @@ p {
 /**********************  Fonctionnement  ***************************/
 
 .section-fonctionnement {
-    padding: 15px;
+    padding: 60px 20px 60px 20px;
+    h2 {
+        margin-top: 0px;
+    }
 }
 
 .fonctionnement-article-section {
     @include flex-col();
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     margin: 10px;
 }
@@ -195,6 +205,13 @@ p {
             & h3, p {
                 margin: 0px;
             }
+        }
+    }
+    &-heart {
+        transition: 0.3s;
+        &:focus {
+            background-color: blue;
+            transition: 0.3s;
         }
     }
 }
