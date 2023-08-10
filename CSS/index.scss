@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-@mixin fonctionnement-number{
+@mixin fonctionnement-number {
     align-items: center;
     display: flex;
     height: 10px;
@@ -27,14 +27,14 @@
 }
 
 :root {
-    --grey-background: #f6f6f6;
-    --dark-grey-background : #EAEAEA;
-    --primary : #9356DC;
-    --button-gradient : linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-    --button-gradient-hover : linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
-    --card-background : white;
-    --footer-bg : #353535 ;
-    --white-txt : #fff;
+    $grey-background: #f6f6f6;
+    $dark-grey-background: #EAEAEA;
+    $primary: #9356DC;
+    $button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+    $button-gradient-hover: linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+    $card-background: white;
+    $footer-bg: #353535;
+    $white-txt: #fff;
 }
 
 body {
@@ -44,47 +44,46 @@ body {
 }
 
 h1 {
-text-align: center;
-font-family: 'Shrikhand';
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    text-align: center;
+    font-family: 'Shrikhand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 h2 {
-
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 h3 {
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 h4 {
     font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
 p {
     font-size: 17px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
 /**********************  HEADER  ***************************/
 
 .header{
-@include flex-col();
-justify-content: center;
+    @include flex-col();
+    justify-content: center;
 }
 
 .title {
@@ -97,7 +96,7 @@ justify-content: center;
 }
 
 .location {
-    background-color: var(--dark-grey-background);
+    background-color: $dark-grey-background;
     box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
     p {
         display: flex;
@@ -111,7 +110,7 @@ justify-content: center;
 /**********************  INTRO  ***************************/
 
 .section-intro {
-    background-color: var(--grey-background);
+    background-color: $grey-background;
     padding: 20px;
     height: 440px;
     @include flex-col();
@@ -125,14 +124,14 @@ justify-content: center;
 
 .explore-button {
     border-radius: 25px;
-    color: var(--white-txt);
+    color: $white-txt;
     border: none;
     padding: 1em 2em;
-    background: var(--button-gradient);
+    background: $button-gradient;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
     &:hover {
-        background: var(--button-gradient-hover);
+        background: $button-gradient-hover;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
         transition: 0.5s;
     }
@@ -154,13 +153,14 @@ justify-content: center;
 }
 
 .fonctionnement-article {
+    height: 75px;
     @include flex-row();
     justify-content: start;
     align-items: center;
     margin-left: 10px;
     gap: 3%;
     border-radius: 20px;
-    background: var(--grey-background);
+    background: $grey-background;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     &--n1::before {
         content: '1';
@@ -183,7 +183,7 @@ justify-content: center;
 
 .section-rest {
     padding: 15px;
-    background-color: var(--grey-background);
+    background-color: $grey-background;
     &-cards {
         width: 100%;
         height: 100%;
@@ -194,7 +194,7 @@ justify-content: center;
 }
 
 .rest-card {
-    background-color: var(--card-background);
+    background-color: $card-background;
     @include flex-col();
     height: 251px;
     width: 100%;
@@ -232,7 +232,7 @@ justify-content: center;
     @include flex-col();
     gap: 18px;
 
-    background-color: var(--footer-bg);
+    background-color: $footer-bg;
     color: var(--white-txt);
     &-title h1 {
         margin: 0px;
