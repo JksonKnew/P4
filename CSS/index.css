@@ -63,6 +63,10 @@ p {
 .location {
   background-color: #EAEAEA;
   box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 .location p {
   display: flex;
@@ -102,7 +106,7 @@ p {
 
 /**********************  Fonctionnement  ***************************/
 .section-fonctionnement {
-  padding: 20px;
+  padding: 15px;
 }
 
 .fonctionnement-article-section {
@@ -180,6 +184,9 @@ p {
   flex-direction: column;
   gap: 18px;
 }
+.section-rest-title {
+  padding: 20px 0px 20px 0px;
+}
 
 .rest-card {
   background-color: white;
@@ -201,13 +208,14 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0px 25px 0px 20px;
   align-items: center;
 }
 .rest-card-content-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 5px;
 }
 .rest-card-content-text h3, .rest-card-content-text p {
   margin: 0px;
