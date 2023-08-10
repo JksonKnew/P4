@@ -1,0 +1,26 @@
+
+
+
+@mixin fonctionnement-number {
+    align-items: center;
+    display: flex;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    right: 13px;
+    justify-content: center;
+    color: $white-txt;
+    padding: 0.5em;
+    border-radius: 25px;
+    background-color: $primary;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}

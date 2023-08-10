@@ -1,40 +1,8 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
 * {
     font-family: 'Roboto', sans-serif;
-}
-
-@mixin fonctionnement-number {
-    align-items: center;
-    display: flex;
-    height: 10px;
-    width: 10px;
-    position: relative;
-    right: 13px;
-    justify-content: center;
-    color: var(--white-txt);
-    padding: 0.5em;
-    border-radius: 25px;
-    background-color: var(--primary);
-}
-
-@mixin flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-:root {
-    $grey-background: #f6f6f6;
-    $dark-grey-background: #EAEAEA;
-    $primary: #9356DC;
-    $button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-    $button-gradient-hover: linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
-    $card-background: white;
-    $footer-bg: #353535;
-    $white-txt: #fff;
 }
 
 body {
@@ -233,7 +201,7 @@ p {
     gap: 18px;
 
     background-color: $footer-bg;
-    color: var(--white-txt);
+    color: $white-txt;
     &-title h1 {
         margin: 0px;
     }
