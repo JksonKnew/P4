@@ -6,6 +6,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0px;
+  background-color: blue;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -238,31 +239,21 @@ p {
   margin: 0px;
 }
 .rest-card-heart {
-  transition: 0.3s;
+  position: relative;
+  right: 20px;
 }
-.rest-card-heart:focus {
-  background-color: blue;
-  transition: 0.3s;
-}
-.rest-card-heart i {
+.rest-card i {
   position: absolute;
 }
 
-.rest-card-heart {
-  position: relative;
+.heart-activate {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.heart-toggle {
-  display: none;
-}
-
-.heart-toggle + label .heart-activate {
-  display: none;
-  transition: 0.3s;
-}
-
-.heart-toggle:checked + label .heart-activate {
-  display: inline-block;
+.rest-card-heart:hover .heart-activate {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 /**********************  Footer  ***************************/

@@ -28,32 +28,18 @@
     flex-direction: row;
 }
 
-@mixin heart-animation{
-    .rest-card-heart {
-        display: inline-block;
-        position: relative;
-      }
-      
-      .heart-toggle {
-        display: none;
-      }
-      
-      .heart-toggle + label i {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      
-      .heart-toggle + label .heart-activate {
-        display: none;
-      }
-      
-      .heart-toggle:checked + label .heart-desactivate {
-        display: none;
-      }
-      
-      .heart-toggle:checked + label .heart-activate {
-        display: inline-block;
-      }
-      
+
+@mixin heart-animation {
+.heart-activate {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.rest-card-heart:hover {
+  .heart-activate {
+         opacity: 1;
+         transition: opacity 0.2s ease-in-out; 
+  }
+
+}
 }

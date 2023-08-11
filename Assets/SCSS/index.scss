@@ -9,6 +9,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0px;
+    background-color: blue;
     &::-webkit-scrollbar {
         display: none;
     }
@@ -210,35 +211,16 @@ p {
         }
     }
     &-heart {
-        transition: 0.3s;
-        &:focus {
-            background-color: blue;
-            transition: 0.3s;
-        }
-        i {
-            position: absolute;
-        }
+        position: relative;
+        right: 20px;
+    }
+    i {
+        position: absolute;
     }
 }
 
-.rest-card-heart {
-    position: relative;
-  }
-  
-  .heart-toggle {
-    display: none;
-  }
-  
-  .heart-toggle + label .heart-activate {
-    display: none;
-    transition: 0.3s;
-  }
-  
-  .heart-toggle:checked + label .heart-activate {
-    display: inline-block;
-  }
-  
-// @include heart-animation;
+
+@include heart-animation;
 
 
 /**********************  Footer  ***************************/
