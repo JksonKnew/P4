@@ -11,7 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="https://kit.fontawesome.com/124c5767b7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/124c5767b7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -73,7 +76,11 @@
                   <p>Ménilmontant</p>
                 </div>
                 <div class="rest-card-heart">
-                  <i class="fa-regular fa-heart fa-xl"></i>
+                  <input type="checkbox" id="heart-toggle" class="heart-toggle">
+                  <label for="heart-toggle">
+                    <i class="fa-regular fa-heart fa-xl heart-desactivate"></i>
+                    <i class="fa-solid fa-heart fa-xl heart-activate"></i>
+                  </label>
                 </div>
               </div>
             </article>
@@ -142,10 +149,13 @@
       </main>
       <footer class="footer">
         <div class="footer-title">
-        <h1>Ohmyfood</h1>
+          <h1>Ohmyfood</h1>
         </div>
         <div class="footer-content">
-          <span><i class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p></span>
+          <span
+            ><i class="fa-solid fa-utensils"></i>
+            <p>Proposer un restaurant</p></span
+          >
           <p>Devenir partenaire</p>
           <p>Mentions légales</p>
           <p>Contact</p>

@@ -1,5 +1,8 @@
 
-
+@mixin standard-font {
+    font-style: normal;
+    line-height: normal;
+}
 
 @mixin fonctionnement-number {
     align-items: center;
@@ -23,4 +26,34 @@
 @mixin flex-row {
     display: flex;
     flex-direction: row;
+}
+
+@mixin heart-animation{
+    .rest-card-heart {
+        display: inline-block;
+        position: relative;
+      }
+      
+      .heart-toggle {
+        display: none;
+      }
+      
+      .heart-toggle + label i {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .heart-toggle + label .heart-activate {
+        display: none;
+      }
+      
+      .heart-toggle:checked + label .heart-desactivate {
+        display: none;
+      }
+      
+      .heart-toggle:checked + label .heart-activate {
+        display: inline-block;
+      }
+      
 }

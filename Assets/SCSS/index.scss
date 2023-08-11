@@ -9,42 +9,40 @@ body {
     width: 100%;
     height: 100%;
     margin: 0px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 h1 {
     text-align: center;
     font-family: 'Shrikhand';
+    @include standard-font;
     font-size: 30px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 h2 {
-    font-style: normal;
+    @include standard-font;
     font-weight: 700;
-    line-height: normal;
 }
 
 h3 {
+    @include standard-font;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 h4 {
+    @include standard-font;
     font-size: 18px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
 }
 
 p {
+    @include standard-font;
     font-size: 17px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
 }
 
 /**********************  HEADER  ***************************/
@@ -91,6 +89,10 @@ p {
     justify-content: center;
     text-align: center;
     gap: 20px;
+        h4 {
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
         h2 {
             margin: 0px;
         }
@@ -213,8 +215,31 @@ p {
             background-color: blue;
             transition: 0.3s;
         }
+        i {
+            position: absolute;
+        }
     }
 }
+
+.rest-card-heart {
+    position: relative;
+  }
+  
+  .heart-toggle {
+    display: none;
+  }
+  
+  .heart-toggle + label .heart-activate {
+    display: none;
+    transition: 0.3s;
+  }
+  
+  .heart-toggle:checked + label .heart-activate {
+    display: inline-block;
+  }
+  
+// @include heart-animation;
+
 
 /**********************  Footer  ***************************/
 
