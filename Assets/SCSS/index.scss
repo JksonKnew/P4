@@ -166,7 +166,7 @@ p {
 /**********************  Restaurents  ***************************/
 
 .section-rest {
-    padding: 15px;
+    padding: 15px 15px 70px 15px;
     background-color: $grey-background;
     &-cards {
         width: 100%;
@@ -264,18 +264,54 @@ p {
 
 @media screen and (min-width:700px) {
     body {
-        background-color: red;
+        // background-color: red;
     };
 
+    .fonctionnement-article-section {
+        flex-direction: row;
+        .fonctionnement-article {
+            width: 100%;
+        }
+    }
+
+
     .section-rest-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            place-items: center;
+        @include flex-row;
+        max-width: 1440px;
+        justify-content: center;
+        row-gap: 50px;
+        column-gap: 100px;
+        place-items: center;
+        flex-wrap: wrap;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width:1440px) {
     body {
-        background-color: blue;
+        // background-color: blue;
+    }
+
+
+    .footer {
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: center;
+        gap: 45px;
+        .footer-content {
+            flex-direction: row;
+            gap: 25px;
+        }
     }
 }
+
+
