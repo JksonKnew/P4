@@ -107,13 +107,13 @@ p {
     border: none;
     padding: 1em 2em;
     background: $button-gradient;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: $explore-btn-shadow;
     transition: 0.5s;
     font-size: 16px;
     font-weight: 500px;
     &:hover {
         background: $button-gradient-hover;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: $explore-btn-shadow-hover;
         transition: 0.5s;
         cursor: pointer;
     }
@@ -146,7 +146,7 @@ p {
     gap: 3%;
     border-radius: 20px;
     background: $grey-background;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $article-shadow;
     &--n1::before {
         content: '1';
         @include fonctionnement-number;
@@ -190,11 +190,32 @@ p {
     max-width: 490px;
     border-radius: 25px;
     overflow: hidden;
-    & img {
+    a {
+        display: contents;
+        color: $primary-font-color;
+        text-decoration: none;
+    }
+    img {
         display: flex;
         height: 70%;
         width: 100%;
         object-fit: cover;
+    }
+    &-new-btn {
+        display: flex;
+        position: relative;
+        top: 20px;
+        right: 20px;
+        flex-direction: row-reverse;
+        &::before {
+            content: 'Nouveau';
+            color: $new-font;
+            background: $new-background;
+            border: 8px solid $new-background;
+            border-radius: 5px;
+            position: absolute;
+            box-shadow: $new-btn-shadow;
+        }
     }
     &-content {
         height: 30%;
