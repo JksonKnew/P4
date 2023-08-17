@@ -264,10 +264,6 @@ p {
 /**********************  Media Queries Intermediaire ***************************/
 
 @media screen and (min-width:700px) {
-    body {
-        background-color: red;
-    };
-
 
     .section-fonctionnement {
         display: flex;
@@ -318,9 +314,6 @@ p {
 
 
 @media screen and (min-width:1440px) {
-    body {
-        background-color: blue;
-    }
 
 
     .footer {

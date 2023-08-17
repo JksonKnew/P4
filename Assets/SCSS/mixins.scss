@@ -30,22 +30,23 @@
 
 
 @mixin heart-animation {
-.heart-activate {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.rest-card-heart{
-  &:hover {
-    .heart-desactivate {
-      font-weight: 600;
-      color: red;
-      transition: 0.2s ease-in-out;
-    }
 
-    
+.rest-card-heart{
+  .heart-activate {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s;
+  }
+  &:hover {
+    .heart-activate {
+      opacity: 1;
+      transform: scale(1.2);
+      transition: 0.2s;
+    }
+  }
   input:checked + label .heart-activate {
     opacity: 1;
-  }
+    transform: scale(1.2);
   }
   }
 }
