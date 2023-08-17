@@ -59,6 +59,10 @@ p {
     p {
         font-family: 'Shrikhand', sans-serif;
     }
+    a {
+        display: contents;
+        color: $primary-font-color;
+    }
 }
 
 .location {
@@ -233,7 +237,7 @@ p {
             }
         }
     }
-    &-heart {
+    .heart {
         position: relative;
         right: 20px;
     }

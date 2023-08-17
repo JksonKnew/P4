@@ -366,3 +366,68 @@ p {
     gap: 25px;
   }
 }
+.intro-img {
+  display: flex;
+  height: 275px;
+  width: 100%;
+}
+.intro-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-menu {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-menu-conteneur {
+  max-width: 1055px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  position: relative;
+  top: -50px;
+  background-color: #f6f6f6;
+}
+.section-menu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+.section-menu-head span {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.section-menu-head .heart {
+  position: relative;
+  right: 30px;
+}
+.section-menu-head .heart i {
+  position: absolute;
+}
+.section-menu-head .heart .heart-check {
+  display: none;
+}
+.section-menu-head .heart .heart .heart-activate {
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.1s ease-in-out;
+  color: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+}
+.section-menu-head .heart .heart:hover .heart-activate {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 0.1s ease-in-out;
+}
+.section-menu-head .heart .heart input:checked + label .heart-activate {
+  opacity: 1;
+  transform: scale(1.2);
+}
