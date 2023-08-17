@@ -36,10 +36,13 @@
 }
 .rest-card-heart{
   &:hover {
-    .heart-activate {
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out; 
-  }
+    .heart-desactivate {
+      font-weight: 600;
+      color: red;
+      transition: 0.2s ease-in-out;
+    }
+
+    
   input:checked + label .heart-activate {
     opacity: 1;
   }

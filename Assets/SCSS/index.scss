@@ -115,6 +115,7 @@ p {
         background: $button-gradient-hover;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
         transition: 0.5s;
+        cursor: pointer;
     }
 }
 
@@ -260,17 +261,36 @@ p {
 
 
 
-/**********************  Media Queries  ***************************/
+/**********************  Media Queries Intermediaire ***************************/
 
 @media screen and (min-width:700px) {
     body {
-        // background-color: red;
+        background-color: red;
     };
 
+
+    .section-fonctionnement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-conteneur {
+            width: 1080px;
+        }
+    }
     .fonctionnement-article-section {
         flex-direction: row;
         .fonctionnement-article {
             width: 100%;
+        }
+    }
+
+
+    .section-rest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-conteneur {
+            max-width: 1080px;
         }
     }
 
@@ -293,12 +313,13 @@ p {
 
 
 
+/**********************  Media Queries Desktop ***************************/
 
 
 
 @media screen and (min-width:1440px) {
     body {
-        // background-color: blue;
+        background-color: blue;
     }
 
 
@@ -306,7 +327,7 @@ p {
         flex-direction: row-reverse;
         justify-content: end;
         align-items: center;
-        gap: 45px;
+        gap: 100px;
         .footer-content {
             flex-direction: row;
             gap: 25px;
