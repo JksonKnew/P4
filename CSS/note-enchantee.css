@@ -431,6 +431,67 @@ p {
   opacity: 1;
   transform: scale(1.2);
 }
+.section-menu .section-choose {
+  height: 100%;
+  margin: 15px;
+}
+.section-menu .section-choose .choose-title-txt {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.section-menu .section-choose .choose-title-decoration::before {
+  content: "";
+  background-color: green;
+  display: block;
+  height: 3px;
+  width: 40px;
+  margin-top: 5px;
+}
+.section-menu .section-choose .choose {
+  height: 72px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.section-menu .section-choose .choose-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  height: 100%;
+  width: 100%;
+}
+.section-menu .section-choose .choose-content .choose-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.section-menu .section-choose .choose-content .choose-txt .food {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.section-menu .section-choose .choose-content .choose-txt .food-content {
+  font-size: 15.043px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.section-menu .section-choose .choose-content .choose-price {
+  margin-right: 20px;
+}
+.section-menu .section-entree {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
 * {
   font-family: "Roboto", sans-serif;
