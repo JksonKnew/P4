@@ -4,34 +4,39 @@
 
 .intro-img {
     display: flex;
-    height: 275px;
+    height: 221px;
     width: 100%;
     & img {
-        height: 100%;
+        height: 275px;
         width: 100%;
         object-fit: cover;
+        object-position: center;
     }
 }
 
 .section-menu {
     width: 100%;
-    height: 1200px;
     @include flex-col();
     align-items: center;
     &-conteneur {
         max-width: 1055px;
         width: 100%;
         height: 100%;
-        border-radius: 50px;
-        position: relative;
-        top: -50px;
+        border-radius: 50px 50px 0px 0px;
         background-color: $grey-background;
+        padding-bottom: 60px;
     }
     &-head {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 30px;
+        justify-content: center;
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
         span {
             font-family: 'Shrikhand', sans-serif;
             font-size: 28px;
@@ -53,24 +58,35 @@
     }
 
     .section-choose {
-        height: 100%;
-        margin: 15px;
-        .choose-title{
-            &-txt {
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-                text-transform: uppercase;
-            }
-            &-decoration::before {
-                content: '';
-                background-color: green;
-                display: block;
-                height: 3px;
-                width: 40px;
-                margin-top: 5px;
-            }
+        margin: 40px 15px 15px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        .division-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 340px;
+            max-width: 600px;
+            width: 100%;
+            .choose-title{
+                &-txt {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+                &-decoration::before {
+                    content: '';
+                    background-color: green;
+                    display: block;
+                    height: 3px;
+                    width: 40px;
+                    margin-top: 5px;
+                }
+            }    
         }
         .choose {
             height: 72px;
@@ -151,12 +167,6 @@
         }
 
 
-    }
-
-    .section-entree {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
     }
 
 }

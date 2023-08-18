@@ -368,18 +368,18 @@ p {
 }
 .intro-img {
   display: flex;
-  height: 275px;
+  height: 221px;
   width: 100%;
 }
 .intro-img img {
-  height: 100%;
+  height: 275px;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .section-menu {
   width: 100%;
-  height: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,16 +388,21 @@ p {
   max-width: 1055px;
   width: 100%;
   height: 100%;
-  border-radius: 50px;
-  position: relative;
-  top: -50px;
+  border-radius: 50px 50px 0px 0px;
   background-color: #f6f6f6;
+  padding-bottom: 60px;
 }
 .section-menu-head {
+  display: flex;
+  justify-content: center;
+}
+.section-menu-head-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px;
+  width: 100%;
+  max-width: 600px;
 }
 .section-menu-head span {
   font-family: "Shrikhand", sans-serif;
@@ -432,17 +437,28 @@ p {
   transform: scale(1.2);
 }
 .section-menu .section-choose {
-  height: 100%;
-  margin: 15px;
+  margin: 40px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
 }
-.section-menu .section-choose .choose-title-txt {
+.section-menu .section-choose .division-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 340px;
+  max-width: 600px;
+  width: 100%;
+}
+.section-menu .section-choose .division-menu .choose-title-txt {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
 }
-.section-menu .section-choose .choose-title-decoration::before {
+.section-menu .section-choose .division-menu .choose-title-decoration::before {
   content: "";
   background-color: green;
   display: block;
@@ -521,9 +537,4 @@ p {
 }
 .section-menu .section-choose .choose input:checked + label .choose-price {
   right: 10px;
-}
-.section-menu .section-entree {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
 }
