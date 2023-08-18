@@ -510,6 +510,18 @@ p {
   right: 10px;
   transition: 0.2s ease-in-out;
 }
+.section-menu .section-choose .choose label {
+  display: contents;
+}
+.section-menu .section-choose .choose input {
+  display: none;
+}
+.section-menu .section-choose .choose input:checked + label .cross {
+  right: 0px;
+}
+.section-menu .section-choose .choose input:checked + label .choose-price {
+  right: 10px;
+}
 .section-menu .section-entree {
   display: flex;
   flex-direction: column;

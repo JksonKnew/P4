@@ -132,9 +132,24 @@
                     right: 10px;
                     transition: 0.2s ease-in-out;
                 }
-
             }
+            label {
+                display: contents;
+            }
+            input{
+                display: none;
+                &:checked + label {
+                    .cross {
+                        right: 0px;
+                    }
+                    .choose-price {
+                        right: 10px;
+                    }
+                }
+            }
+
         }
+
 
     }
 
