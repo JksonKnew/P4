@@ -79,6 +79,7 @@
             border-radius: 15px;
             display: flex;
             flex-direction: row;
+            overflow: hidden;
             &-content {
                 display: flex;
                 flex-direction: row;
@@ -105,8 +106,33 @@
                     }
                 }
                 .choose-price {
-                    margin-right: 20px;
+                    position: relative;
+                    right: -40px;
+                    transition: 0.2s ease-in-out;
                 }
+            }
+            .cross {
+                background-color: green;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                color: white;
+                position: relative;
+                right: -70px;
+                transition: 0.2s ease-in-out;
+            }
+            &:hover {
+                .cross {
+                    right: 0px;
+                    transition: 0.2s ease-in-out;
+                }
+                .choose-price {
+                    right: 10px;
+                    transition: 0.2s ease-in-out;
+                }
+
             }
         }
 
