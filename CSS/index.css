@@ -104,6 +104,9 @@ p {
 .section-intro p {
   margin-top: 0px;
 }
+.section-intro a {
+  display: contents;
+}
 
 .explore-button {
   border-radius: 25px;
@@ -271,6 +274,7 @@ p {
 }
 .rest-card i {
   position: absolute;
+  cursor: pointer;
 }
 .rest-card .heart-check {
   display: none;
@@ -280,7 +284,6 @@ p {
   opacity: 0;
   transform: scale(0);
   transition: 0.1s ease-in-out;
-  color: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 }
 .heart:hover .heart-activate {
   opacity: 1;
@@ -316,6 +319,13 @@ p {
 .footer-content span {
   display: flex;
   gap: 10px;
+}
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-content a :hover {
+  text-decoration: underline;
 }
 
 /**********************  Media Queries Intermediaire ***************************/

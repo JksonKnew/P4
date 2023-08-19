@@ -269,8 +269,14 @@ p {
   position: relative;
   right: 20px;
 }
+.rest-card .heart .heart-activate {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .rest-card i {
   position: absolute;
+  cursor: pointer;
 }
 .rest-card .heart-check {
   display: none;
@@ -280,7 +286,6 @@ p {
   opacity: 0;
   transform: scale(0);
   transition: 0.1s ease-in-out;
-  color: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 }
 .heart:hover .heart-activate {
   opacity: 1;
@@ -438,7 +443,6 @@ p {
   opacity: 0;
   transform: scale(0);
   transition: 0.1s ease-in-out;
-  color: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 }
 .section-menu-head .heart .heart:hover .heart-activate {
   opacity: 1;

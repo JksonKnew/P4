@@ -37,8 +37,8 @@
     opacity: 0;
     transform: scale(0);
     transition: 0.1s ease-in-out;
-    color: $button-gradient;
-    }
+    
+  }
   &:hover {
     .heart-activate {
       opacity: 1;
