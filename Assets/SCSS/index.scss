@@ -117,7 +117,6 @@ p {
     box-shadow: $explore-btn-shadow;
     transition: 0.5s;
     font-size: 16px;
-    font-weight: 500px;
     &:hover {
         background: $button-gradient-hover;
         box-shadow: $explore-btn-shadow-hover;
@@ -297,7 +296,7 @@ p {
 
 
 
-/**********************  Media Queries Intermediaire ***************************/
+/**********************  Media Queries ***************************/
 
 @media screen and (min-width:700px) {
 
@@ -342,14 +341,7 @@ p {
 
 
 
-
-
-
-/**********************  Media Queries Desktop ***************************/
-
-
-
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1100px) {
 
 
     .footer {
@@ -363,5 +355,8 @@ p {
         }
     }
 }
+
+
+
 
 
