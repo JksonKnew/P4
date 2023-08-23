@@ -1,49 +1,25 @@
 @import 'mixins.scss';
 @import 'variables.scss';
+@import 'generic.scss';
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
-body {
-    width: 100%;
+/**********************  LOADER  ***************************/
+
+
+.loader {
     height: 100%;
-    margin: 0px;
-    &::-webkit-scrollbar {
-        display: none;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 76, 255, 1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    &-text-content {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 50px
     }
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Shrikhand';
-    @include standard-font;
-    font-size: 30px;
-    font-weight: 400;
-}
-
-h2 {
-    @include standard-font;
-    font-weight: 700;
-}
-
-h3 {
-    @include standard-font;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-h4 {
-    @include standard-font;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-p {
-    @include standard-font;
-    font-size: 17px;
-    font-weight: 300;
-}
 
 /**********************  HEADER  ***************************/
 
@@ -242,6 +218,7 @@ p {
     .heart {
         position: relative;
         right: 20px;
+
     }
     i {
         position: absolute;
@@ -253,6 +230,7 @@ p {
 }
 
 @include heart-animation;
+@include heart-background;
 
 
 
