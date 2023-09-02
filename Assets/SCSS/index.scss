@@ -7,18 +7,24 @@
 
 
 .loader {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background: $heart-gradient;
     height: 100%;
     width: 100%;
-    position: absolute;
-    background-color: rgba(0, 76, 255, 1);
-    display: none;
-    justify-content: center;
-    align-items: center;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 0.3s 2s forwards;
     &-text-content {
         font-family: 'Shrikhand', sans-serif;
-        font-size: 50px
-    }
-}
+        font-size: 50px;
+        color: $white-txt;
+        }
+  }
+
+
 
 
 /**********************  HEADER  ***************************/
@@ -96,8 +102,8 @@
     &:hover {
         background: $button-gradient-hover;
         box-shadow: $explore-btn-shadow-hover;
-        transition: 0.5s;
         cursor: pointer;
+        transform: scale(1.05);
     }
 }
 
