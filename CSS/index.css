@@ -9,12 +9,14 @@
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
 @keyframes animateIn {
@@ -28,12 +30,14 @@
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
 * {
@@ -90,7 +94,7 @@ p {
   position: fixed;
   display: grid;
   place-items: center;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  background: #000;
   height: 100%;
   width: 100%;
   inset: 0;
@@ -98,10 +102,42 @@ p {
   opacity: 0.9;
   animation: disappear 0.3s 2s forwards;
 }
-.loader-text-content {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 50px;
-  color: #fff;
+.loader .loader-object {
+  width: 64px;
+  height: 48px;
+  display: flex;
+  position: relative;
+  animation: split 0.6s linear infinite alternate;
+}
+.loader .loader-object::before, .loader .loader-object::after {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform: translateX(-10px);
+  background: #9356DC;
+  opacity: 0.75;
+  backdrop-filter: blur(20px);
+}
+.loader .loader-object::after {
+  left: auto;
+  right: 0;
+  background: #FFF;
+  transform: translateX(10px);
+}
+@keyframes split {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
 }
 
 /**********************  HEADER  ***************************/
