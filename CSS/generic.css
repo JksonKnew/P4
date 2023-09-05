@@ -9,14 +9,28 @@
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
+@keyframes split {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
+/****************************************************/
+/******** HEART ********/
+/****** LOADER ******/
+/********* Open Menu ***********/
 * {
   font-family: "Roboto", sans-serif;
 }

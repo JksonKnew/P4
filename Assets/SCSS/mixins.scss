@@ -7,7 +7,7 @@
     opacity: 0;
     transform: scale(0.6) translateY(-8px);
   }
-  
+
   100% {
     opacity: 1;
   }
@@ -27,7 +27,38 @@
 }
 
 
+@keyframes split {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
 
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    width: 64px;
+  }
+  30% {
+    transform: rotate(100deg);
+  }
+  50% {
+    width: 148px;
+  }
+  80% {
+    transform: rotate(590deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    width: 64px;
+  }
+}
+
+
+
+/****************************************************/
 
 
 @mixin standard-font {
@@ -59,6 +90,15 @@
     flex-direction: row;
 }
 
+/******** HEART ********/
+
+@mixin heart-background {
+  .heart-arctivate, .fa-heart:before {
+    background: $heart-gradient;
+    -webkit-background-clip: text;
+  }
+}
+
 
 @mixin heart-animation {
 .heart{
@@ -66,7 +106,7 @@
     opacity: 0;
     transform: scale(0);
     transition: 0.1s ease-in-out;
-    
+
   }
   &:hover {
     .heart-activate {
@@ -75,7 +115,7 @@
       transition: 0.1s ease-in-out;
       color: transparent;
       cursor: pointer;
-      
+
     }
   }
   input:checked + label .heart-activate {
@@ -86,14 +126,15 @@
   }
 }
 
-@mixin loader-object {
+/****** LOADER ******/
 
+@mixin loader-object {
 .loader-object {
   width: 64px;
   height: 48px;
   display: flex;
   position: relative;
-  animation: split 0.6s linear infinite alternate;
+  animation: roll 0.8s linear infinite;
 }
 .loader-object::before , .loader-object::after {
   content: '';
@@ -115,31 +156,11 @@
   background: #FFF;
   transform: translateX(10px);
 }
-
-@keyframes split {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
-  }
 }
 
-}
-  
 
+/********* Open Menu ***********/
 
-
-
-@mixin heart-background {
-  .heart-arctivate, .fa-heart:before {
-    background: $heart-gradient;
-    -webkit-background-clip: text;
-  }
-}
 
 @mixin open-animation {
   @for $i from 1 through 5 {
@@ -149,7 +170,6 @@
   }
   animation-name: animateIn;
   animation-duration: 350ms;
-  animation-delay: calc(var(--animation-order) * 100ms);
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }

@@ -8,14 +8,14 @@
 
 .loader {
     position: fixed;
-    display: grid;
-    place-items: center;
-    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
-    inset: 0;
     z-index: 1;
-    opacity: 0.9;
     animation: disappear 0.3s 2s forwards;
     @include loader-object;
   }

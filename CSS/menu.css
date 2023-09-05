@@ -9,14 +9,47 @@
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
+@keyframes split {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    width: 64px;
+  }
+  30% {
+    transform: rotate(100deg);
+  }
+  50% {
+    width: 148px;
+  }
+  80% {
+    transform: rotate(590deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    width: 64px;
+  }
+}
+/****************************************************/
+/******** HEART ********/
+/****** LOADER ******/
+/********* Open Menu ***********/
 @keyframes animateIn {
   0% {
     opacity: 0;
@@ -28,14 +61,47 @@
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
+@keyframes split {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    width: 64px;
+  }
+  30% {
+    transform: rotate(100deg);
+  }
+  50% {
+    width: 148px;
+  }
+  80% {
+    transform: rotate(590deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    width: 64px;
+  }
+}
+/****************************************************/
+/******** HEART ********/
+/****** LOADER ******/
+/********* Open Menu ***********/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -88,24 +154,24 @@ p {
 /**********************  LOADER  ***************************/
 .loader {
   position: fixed;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   height: 100%;
   width: 100%;
-  inset: 0;
   z-index: 1;
-  opacity: 0.9;
+  animation: disappear 0.3s 2s forwards;
 }
-
-.loader-object {
+.loader .loader-object {
   width: 64px;
   height: 48px;
+  display: flex;
   position: relative;
-  animation: split 1s ease-in infinite alternate;
+  animation: roll 0.8s linear infinite;
 }
-
-.loader-object::before, .loader-object::after {
+.loader .loader-object::before, .loader .loader-object::after {
   content: "";
   position: absolute;
   height: 48px;
@@ -114,26 +180,17 @@ p {
   left: 0;
   top: 0;
   transform: translateX(-10px);
-  background: #FF3D00;
+  background: #9356DC;
   opacity: 0.75;
   backdrop-filter: blur(20px);
 }
-
-.loader-object::after {
+.loader .loader-object::after {
   left: auto;
   right: 0;
   background: #FFF;
   transform: translateX(10px);
 }
 
-@keyframes split {
-  0%, 25% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
-  }
-}
 /**********************  HEADER  ***************************/
 .header {
   display: flex;
@@ -480,14 +537,47 @@ p {
 }
 @keyframes disappear {
   0% {
-    transform: scale(1);
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
-    opacity: 0;
   }
 }
+@keyframes split {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    width: 64px;
+  }
+  30% {
+    transform: rotate(100deg);
+  }
+  50% {
+    width: 148px;
+  }
+  80% {
+    transform: rotate(590deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    width: 64px;
+  }
+}
+/****************************************************/
+/******** HEART ********/
+/****** LOADER ******/
+/********* Open Menu ***********/
 .header .return-btn {
   display: flex;
   align-items: center;
@@ -617,7 +707,6 @@ p {
   overflow: hidden;
   animation-name: animateIn;
   animation-duration: 350ms;
-  animation-delay: calc(var(--animation-order) * 100ms);
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
