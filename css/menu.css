@@ -19,14 +19,6 @@
     transform: scale(0);
   }
 }
-@keyframes split {
-  0% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
-  }
-}
 @keyframes roll {
   0% {
     transform: rotate(0deg);
@@ -69,14 +61,6 @@
   }
   100% {
     transform: scale(0);
-  }
-}
-@keyframes split {
-  0% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
   }
 }
 @keyframes roll {
@@ -547,14 +531,6 @@ p {
     transform: scale(0);
   }
 }
-@keyframes split {
-  0% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
-  }
-}
 @keyframes roll {
   0% {
     transform: rotate(0deg);
@@ -705,10 +681,7 @@ p {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  animation-name: animateIn;
-  animation-duration: 350ms;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation: animateIn 350ms ease-in-out both;
 }
 .section-menu .section-choose .choose:nth-child(1) {
   animation-delay: 100ms;

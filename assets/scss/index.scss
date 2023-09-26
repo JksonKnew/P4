@@ -79,9 +79,6 @@
         p {
             margin-top: 0px;
         }
-        a {
-            display: contents;
-        }
 }
 
 .explore-button {
@@ -93,6 +90,7 @@
     box-shadow: $explore-btn-shadow;
     transition: 0.5s;
     font-size: 16px;
+    text-decoration: none;
     &:hover {
         background: $button-gradient-hover;
         box-shadow: $explore-btn-shadow-hover;
@@ -172,6 +170,7 @@
     max-width: 490px;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
     a {
         display: contents;
         color: $primary-font-color;
@@ -216,9 +215,9 @@
         }
     }
     .heart {
-        position: relative;
-        right: 20px;
-
+        position: absolute;
+        bottom: 37px;
+        right: 45px;
     }
     i {
         position: absolute;

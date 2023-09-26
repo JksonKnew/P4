@@ -19,14 +19,6 @@
     transform: scale(0);
   }
 }
-@keyframes split {
-  0% {
-    width: 64px;
-  }
-  100% {
-    width: 148px;
-  }
-}
 @keyframes roll {
   0% {
     transform: rotate(0deg);
