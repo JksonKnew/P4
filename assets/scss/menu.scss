@@ -124,26 +124,31 @@
                 height: 100%;
                 width: 100%;
                 .choose-txt {
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
                     gap: 5px;
                     .food {
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 500;
                         line-height: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     .food-content {
                         font-size: 15.043px;
                         font-style: normal;
                         font-weight: 300;
                         line-height: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 .choose-price {
                     position: relative;
-                    right: -40px;
                     transition: 0.2s ease-in-out;
+                    margin-right: -40px;
                 }
             }
             .cross {
@@ -164,7 +169,7 @@
                     transition: 0.2s ease-in-out;
                 }
                 .choose-price {
-                    right: 10px;
+                    margin: 10px;
                     transition: 0.2s ease-in-out;
                 }
             }
@@ -183,6 +188,12 @@
                     }
                 }
             }
+        label {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
 
         }
 

@@ -232,9 +232,6 @@ p {
 .section-intro p {
   margin-top: 0px;
 }
-.section-intro a {
-  display: contents;
-}
 
 .explore-button {
   border-radius: 25px;
@@ -245,6 +242,7 @@ p {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
   font-size: 16px;
+  text-decoration: none;
 }
 .explore-button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
@@ -350,6 +348,7 @@ p {
   max-width: 490px;
   border-radius: 25px;
   overflow: hidden;
+  position: relative;
 }
 .rest-card a {
   display: contents;
@@ -396,8 +395,9 @@ p {
   margin: 0px;
 }
 .rest-card .heart {
-  position: relative;
-  right: 20px;
+  position: absolute;
+  bottom: 37px;
+  right: 45px;
 }
 .rest-card i {
   position: absolute;
@@ -708,8 +708,7 @@ p {
   width: 100%;
 }
 .section-menu .section-choose .choose-content .choose-txt {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 5px;
 }
 .section-menu .section-choose .choose-content .choose-txt .food {
@@ -717,17 +716,23 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .section-menu .section-choose .choose-content .choose-txt .food-content {
   font-size: 15.043px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .section-menu .section-choose .choose-content .choose-price {
   position: relative;
-  right: -40px;
   transition: 0.2s ease-in-out;
+  margin-right: -40px;
 }
 .section-menu .section-choose .choose .cross {
   background-color: #99E2D0;
@@ -746,7 +751,7 @@ p {
   transition: 0.2s ease-in-out;
 }
 .section-menu .section-choose .choose:hover .choose-price {
-  right: 10px;
+  margin: 10px;
   transition: 0.2s ease-in-out;
 }
 .section-menu .section-choose .choose label {
@@ -761,6 +766,12 @@ p {
 }
 .section-menu .section-choose .choose input:checked + label .choose-price {
   right: 10px;
+}
+.section-menu .section-choose .choose label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 .section-menu .command-button {
   display: flex;
